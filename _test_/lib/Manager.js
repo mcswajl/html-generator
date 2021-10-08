@@ -22,4 +22,4 @@ class Manager {
         return "Manager"
     }
 }
-module.exports = Engineer
+module.exports = Manager
