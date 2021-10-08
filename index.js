@@ -38,7 +38,7 @@ function buildmyTeam(){
       type: "list",
       name: "role",
       message:"Do you want to add another team member?",
-      choices: ["Intern","Engineer","Manager","Employee"]
+      choices: ["Intern","Engineer","Manager","Employee","Quit"]
     }
   ]).then((answer)=> {
     if (answer.role === "Engineer"){
@@ -150,11 +150,13 @@ function buildmyTeam(){
         ]).then((answers)=>{
           let intern = new Employee(answers.name, answers.id, answers.email,answers.officeNumber);
           // myteam.splice(myteam.length-1,0,intern.getHTML());
-          buildmyTeam();
+          return printHTML(myteam);
         })
       }
 
-    return printHTML(myteam);
+      if (answer.role === "Quit"){
+        return printHTML(myteam);
+      }
   });
 }
 function printHTML(myteam){
