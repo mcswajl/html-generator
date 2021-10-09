@@ -165,7 +165,8 @@ for (let i = 0; i < data.length; i++) {
     indiv = `<li class="list-group-item" id="School">${data[i].school}</li>`
   }
   else if (data[i].getRole() === 'Engineer'){
-      indiv = `<li class="list-group-item" id="GitHub">${data[i].github}</li>`
+      indiv = `<li class="list-group-item" id="GitHub">
+      <a href="url">${data[i].github}</a></li>`
   }
   else {
     indiv = `<li class="list-group-item" id="Office Number">${data[i].officenumber}</li>`
@@ -174,18 +175,17 @@ for (let i = 0; i < data.length; i++) {
 
   cards += `<div class="col-md-4">
   <div class="card bg-primary border-light shadow mb-3" style="max-width: 18rem; height: 22rem;">
-      <div class="card-header text-white">
-          <h2 id="name">${data[i].name}</h2>
-          <h3><span 
-          <img src="/src/images/arrow-down-left-square.svg" alt="Bootstrap" width="32" height="32">
-        </i>${data[i].getRole()}
-        </span></h3>
+      <div class="text-left card-header text-white">
+          <h2 id="name">${data[i].name}
+          <br>
+          <img src="./src/images/list-task.svg"></img>${data[i].getRole()}</h2>
       </div>
-      <div class="card-body bg-light align-content-center flex-wrap">
+      <div class="border border-secondary card-body bg-light align-content-center flex-wrap">
           <div>
-              <ul class="list-group list-group-flush">
+              <ul class="text-left list-group list-group-flush">
                   <li class="list-group-item" id="id">${data[i].id}</li>
-                  <li class="list-group-item" id="email">${data[i].email}</li>
+                  <li class="list-group-item" id="email">
+                  <a href="url">${data[i].email}</a></li>
                   ${indiv}
               </ul>
           </div>
