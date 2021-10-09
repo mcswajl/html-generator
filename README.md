@@ -106,6 +106,9 @@ You are required to submit the following for review:
 ## GitHub Link
 GitHub URL:  https://github.com/mcswajl/html-generator
 
+## Video recording link
+https://watch.screencastify.com/v/fL39Y15iN6tpQVNfXswX
+
 Joshua McSwain
 joshua.mcswain@mecklenburgcountync.gov
 UNCC coding bootcamp 2021
