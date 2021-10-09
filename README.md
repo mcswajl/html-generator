@@ -91,7 +91,7 @@ Finally, although it’s not a requirement, you should consider adding validatio
 
 ## Screenshot (taken during development)
 Screenshot of my website
-![Screenshot](./src/images/screenshot.jpg)
+![Screenshot](./src/images/screenshot2.jpg)
 
 ## Review
 
