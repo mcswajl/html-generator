@@ -12,26 +12,26 @@ const employees = []
 
 function initalize(){
   return inquirer.prompt([
-    {
-      type: "input",
-      name: "name",
-      message: `What is your name?`
-    },
-    {
-      type: "input",
-      name: "id",
-      message: `What is your ID?`
-    },
-    {
-      type: "input",
-      name: "email",
-      message: `What is your email?`
-    },
-    {
-      type: "input",
-      name: "officenumber",
-      message: `What is your office number?`
-    }
+//     {
+//       type: "input",
+//       name: "name",
+//       message: `What is your name?`
+//     },
+//     {
+//       type: "input",
+//       name: "id",
+//       message: `What is your ID?`
+//     },
+//     {
+//       type: "input",
+//       name: "email",
+//       message: `What is your email?`
+//     },
+//     {
+//       type: "input",
+//       name: "officenumber",
+//       message: `What is your office number?`
+//     }
   ])
 }
 function buildmyTeam(){
@@ -39,7 +39,7 @@ function buildmyTeam(){
     {
       type: "list",
       name: "role",
-      message:"Do you want to add another team member?",
+      message:"Do you want to add a team member? Please select a member type",
       choices: ["Intern","Engineer","Manager","No"]
     }
   ]).then((answer)=> {
@@ -66,8 +66,7 @@ function buildmyTeam(){
           message: `What is your engineer's GitHub??`
         }
       ]).then((answers)=>{
-        let engineer = new Engineer(answers.name, answers.id, answers.email,answers.github);
-        // myTeam.splice(myteam.length-1,0,engineer.getHTML());
+        let engineer = new Engineer(answers.name, "ID:  " +  answers.id, "Email:  " + answers.email,"GitHub:  " + answers.github);
         employees.push(engineer)
         buildmyTeam();
       })
@@ -95,8 +94,7 @@ function buildmyTeam(){
           message: `What is your intern's school?`
         }
       ]).then((answers)=>{
-        let intern = new Intern(answers.name, answers.id, answers.email,answers.school);
-        // myteam.splice(myteam.length-1,0,intern.getHTML());
+        let intern = new Intern(answers.name, "ID:  " + answers.id, "Email:  " + answers.email,"School:  " + answers.school);
         employees.push(intern)
         buildmyTeam();
       })
@@ -124,7 +122,7 @@ function buildmyTeam(){
           message: `What is your Manager's office number?`
         }
       ]).then((answers)=>{
-        let manager = new Manager(answers.name, answers.id, answers.email,answers.officenumber);
+        let manager = new Manager(answers.name, "Name:  " + answers.id, "Email:  " + answers.email,"Office Number:  " + answers.officenumber);
         employees.push(manager)
         buildmyTeam();
       })
@@ -164,21 +162,24 @@ function writeToFile(data){
 for (let i = 0; i < data.length; i++) {
   let indiv; 
   if (data[i].getRole() === 'Intern'){
-    indiv = `<li class="list-group-item" id="id">${data[i].school}</li>`
+    indiv = `<li class="list-group-item" id="School">${data[i].school}</li>`
   }
   else if (data[i].getRole() === 'Engineer'){
-      indiv = `<li class="list-group-item" id="id">${data[i].github}</li>`
+      indiv = `<li class="list-group-item" id="GitHub">${data[i].github}</li>`
   }
   else {
-    indiv = `<li class="list-group-item" id="id">${data[i].officenumber}</li>`
+    indiv = `<li class="list-group-item" id="Office Number">${data[i].officenumber}</li>`
   }
 
 
   cards += `<div class="col-md-4">
   <div class="card bg-primary border-light shadow mb-3" style="max-width: 18rem; height: 22rem;">
       <div class="card-header text-white">
-          <h2 id="name">${data[i].name}></h2>
-          <h3><span class="Manager">${data[i].getRole()}</span></h3>
+          <h2 id="name">${data[i].name}</h2>
+          <h3><span 
+          <img src="/src/images/arrow-down-left-square.svg" alt="Bootstrap" width="32" height="32">
+        </i>${data[i].getRole()}
+        </span></h3>
       </div>
       <div class="card-body bg-light align-content-center flex-wrap">
           <div>
@@ -206,14 +207,10 @@ cards +=`</div>
     }
     console.log("My Team page has been constructed!")
   });
-  // open("myTeam.html");
   };
 
 initalize()
 .then((answers)=>{
   const manager = new Manager(answers.name, answers.id, answers.email,answers.officenumber);
-  // myteam.splice(myteam.length-1,0,manager.getHTML());
   buildmyTeam();
 });
-
-// module.exports = index;
