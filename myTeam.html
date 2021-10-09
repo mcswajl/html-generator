@@ -1,122 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>My Awesome Team</title>
-  <!-- Latest compiled and minified CSS & JS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- <script src="https://code.jquery.com/jquery.js"></script> -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-</head>
-
-<body>
-
-  <div class="container container-fluid text-center">
-    <div class="jumbotron bg-danger">
-      <h1 class="bg-danger text-white">My Team</h1>
-    </div>
-    <div class="row">
-
-        <div class="col-md-4">
-            <div class="card bg-primary border-light shadow mb-3" style="max-width: 18rem; height: 22rem;">
-                <div class="card-header text-white">
-                    <h2 id="name">${data.name}></h2>
-                    <h3><span class="Manager"></span>Manager</h3>
-                </div>
-                <div class="card-body bg-light align-content-center flex-wrap">
-                    <div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item" id="id">${data.id}</li>
-                            <li class="list-group-item" id="email">${data.email}</li>
-                            <li class="list-group-item" id="officenumber">${data.officenumber}</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card bg-primary border-light shadow mb-3" style="max-width: 18rem; height: 22rem;">
-                <div class="card-header text-white">
-                    <h2 id="name">${data.name}</h2>
-                    <h3><span class="Intern"></span>Intern</h3>
-                </div>
-                <div class="card-body bg-light align-content-center flex-wrap">
-                    <div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item" id="id">${data.id} </li>
-                            <li class="list-group-item" id="email">${data.email} </li>
-                            <li class="list-group-item" id="school">${data.school} </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-md-4">
-            <div class="card bg-primary border-light shadow mb-3" style="max-width: 18rem; height: 22rem;">
-                <div class="card-header text-white">
-                    <h2 id="name">${data.name}</h2>
-                    <h3><span class="Engineer"></span>Engineer</h3>
-                </div>
-                <div class="card-body bg-light align-content-center flex-wrap">
-                    <div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item" id="id">${data.id} </li>
-                            <li class="list-group-item" id="email">${data.email} </li>
-                            <li class="list-group-item" id="github">${data.github} </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-    <div class="row">
-         <div class="col-md-3 offset-md-3">
-            <div class="card bg-primary border-light shadow mb-3" style="max-width: 18rem; height: 22rem;">
-                <div class="card-header text-white">
-                    <h2 id="name">${data.name}</h2>
-                    <h3><span class="Manager"></span>Manager</h3>
-                </div>
-                <div class="card-body bg-light align-content-center flex-wrap">
-                    <div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item" id="id">${data.id} </li>
-                            <li class="list-group-item" id="email">${data.email} </li>
-                            <li class="list-group-item" id="officenumber">${data.officenumber} </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-
-        <div class="col-md-3">
-            <div class="card bg-primary border-light shadow mb-3" style="max-width: 18rem; height: 22rem;">
-                <div class="card-header text-white">
-                    <h2 id="name">${data.name}</h2>
-                    <h3><span class="Employee"></span>Employee</h3>
-                </div>
-                <div class="card-body bg-light align-content-center flex-wrap">
-                    <div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item" id="id">${data.id} </li>
-                            <li class="list-group-item" id="email">${data.email} </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+  <html lang="en">
   
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Awesome Team</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <script src="https://code.jquery.com/jquery.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  
+  </head>
+  
+  <body>
+  
+    <div class="container container-fluid text-center">
+      <div class="jumbotron bg-danger">
+        <h1 class="bg-danger text-white">My Team</h1>
+      </div>
+      <div class="row">
+  <div class="col-md-4">
+  <div class="card bg-primary border-light shadow mb-3" style="max-width: 18rem; height: 22rem;">
+      <div class="card-header text-white">
+          <h2 id="name">asdf></h2>
+          <h3><span class="Manager">Intern</span></h3>
+      </div>
+      <div class="card-body bg-light align-content-center flex-wrap">
+          <div>
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item" id="id">asdf</li>
+                  <li class="list-group-item" id="email">asdf</li>
+                  <li class="list-group-item" id="id">asdfa</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="card bg-primary border-light shadow mb-3" style="max-width: 18rem; height: 22rem;">
+      <div class="card-header text-white">
+          <h2 id="name">asdfa></h2>
+          <h3><span class="Manager">Engineer</span></h3>
+      </div>
+      <div class="card-body bg-light align-content-center flex-wrap">
+          <div>
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item" id="id">asdf</li>
+                  <li class="list-group-item" id="email">asdfa</li>
+                  <li class="list-group-item" id="id">asdf</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="card bg-primary border-light shadow mb-3" style="max-width: 18rem; height: 22rem;">
+      <div class="card-header text-white">
+          <h2 id="name">asdfa></h2>
+          <h3><span class="Manager">Manager</span></h3>
+      </div>
+      <div class="card-body bg-light align-content-center flex-wrap">
+          <div>
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item" id="id">asdf</li>
+                  <li class="list-group-item" id="email">asdfa</li>
+                  <li class="list-group-item" id="id">asdf</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="card bg-primary border-light shadow mb-3" style="max-width: 18rem; height: 22rem;">
+      <div class="card-header text-white">
+          <h2 id="name">asdf></h2>
+          <h3><span class="Manager">Intern</span></h3>
+      </div>
+      <div class="card-body bg-light align-content-center flex-wrap">
+          <div>
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item" id="id">asdf</li>
+                  <li class="list-group-item" id="email">asdf</li>
+                  <li class="list-group-item" id="id">af</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="card bg-primary border-light shadow mb-3" style="max-width: 18rem; height: 22rem;">
+      <div class="card-header text-white">
+          <h2 id="name">asdf></h2>
+          <h3><span class="Manager">Engineer</span></h3>
+      </div>
+      <div class="card-body bg-light align-content-center flex-wrap">
+          <div>
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item" id="id">asdf</li>
+                  <li class="list-group-item" id="email">asdf</li>
+                  <li class="list-group-item" id="id">asdf</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
 
 </body>
 

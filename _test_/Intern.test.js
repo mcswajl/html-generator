@@ -1,15 +1,15 @@
-const { TestWatcher } = require("@jest/core")
+const Employee = require("./lib/Employee");
 const Intern = require("./lib/Intern")
 
 
-TestWatcher('Test Intern Class', ()=>{
-    const Josh = new Intern("Josh, 42, joshua.mcswain@mecknc.gov")
-    const boolean;
+test('Test Intern Class', ()=>{
+    const Josh = new Employee("Josh, 42, joshua.mcswain@mecknc.gov")
+    let boolean;
     if(typeof Josh === "object"){
         boolean = true
     }else{
         boolean = false
     }
     expect(boolean).toBe(true)
-    expect(Adam.getRole()).toBe("Employee")
+    expect(Josh.getRole()).toBe("Employee")
 })
